@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+Hallo rickhoofd<!DOCTYPE html>
 <html>
 	<head>
 	<!-- Character set -->
