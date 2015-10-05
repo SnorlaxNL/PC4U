@@ -1,4 +1,4 @@
-Hallo rickhoofd<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
 	<!-- Character set -->
@@ -7,7 +7,7 @@ Hallo rickhoofd<!DOCTYPE html>
 		<!-- SEO -->
 		<meta name="keywords" content="">
 	    <meta name="description" content="">
-		<meta name="author" content="G">
+		<meta name="author" content="">
 		
 		<!-- Maakt in zoomen op mobiel mogelijk (zorgt er ook voor dat de website er goed en responsive uitziet op de mobiel/tablet/laptop) -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +20,7 @@ Hallo rickhoofd<!DOCTYPE html>
 		<link rel="icon" type="image/jpg" href="img/GGG.png"> <!-- Eventueel de icon verbeteren -->
 
 		<!-- CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> <!-- Dit laat vaak sneller bij mensen, omdat dit op meerdere site's wordt gezet en dus is er een grote kans dat deze CSS al op de machine van een gebruiker staat waardoor ze het alleen maar van de machine hoeven op te vragen wat tijd scheelt. Verder zal het je eigen hosting server niet belasten -->
+		<link rel="stylesheet" href="css/bootstrap.css"> <!-- Dit laat vaak sneller bij mensen, omdat dit op meerdere site's wordt gezet en dus is er een grote kans dat deze CSS al op de machine van een gebruiker staat waardoor ze het alleen maar van de machine hoeven op te vragen wat tijd scheelt. Verder zal het je eigen hosting server niet belasten -->
 		<link rel="stylesheet" href="css/bootstrap-theme.min.css"> <!-- Kan niet zoals hierboven geïmporteerd worden want ik heb de class names moeten veranderen wegens een confrontatie in de button-layout tussen de buttons in de header en in de footer -->
 		<link rel="stylesheet" href="css/custom.css"> <!-- Hier bevindt zich alle zelfgemaakte CSS -->
 		<!-- Font Awesome CSS -->
@@ -28,51 +28,51 @@ Hallo rickhoofd<!DOCTYPE html>
 		
 	</head>
 	<body>
-<!-- Navigation Bar -->
-	<nav class="navbar navbar-default navbar-fixed-top topnav">
-		<div class="container">
-			<div class="navbar-header page-scroll">
-				<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#page-top" data-id="page-top"><div class="hidden-xs"></div><div class="visible-xs-block">plaatje :)</div></a>
-				<ul class="visible-xs-block xs-basket nav navbar-nav pull-right">
-					<li><a href="#winkelwagen" data-toggle="modal"><img class="cart" src="img/winkelwagen.png" alt="Winkelwagen" width="20" height="20"><span class="badge" id="comparison-count"><?php print_r(count($_SESSION['cart_items'])); ?></span></a></li>
-				</ul>
-			</div>
-			<!-- Alles dat geactiveerd wordt wanneer je op de button klikt hier: -->
-			<div id="navbarCollapse" class="collapse navbar-collapse">
-				<ul class="nav navbar-nav navbar-center hidden-xs">
-					<li><a href="#Componenten">Componenten</a></li>
-					<li><a href="#Randapparatuur">Randapparatuur</a></li>
-					<li><a href="#Contact">Contact</a></li>
-					<li class="dropdown">
-						<?php include 'templates/login-form.php'; ?>
-					</li>
-					<li class="hidden-xs"><a href="#winkelwagen" data-toggle="modal"><img class="cart" src="img/winkelwagen.png" alt="Winkelwagen" width="20" height="20"><span class="badge" id="comparison-count"><?php print_r(count($_SESSION['cart_items'])); ?></span></a></li> <!-- Dit zal laten zien wat je allemaal gaat bestellen, momenteel is alleen een winkelwagen tekentje nodig -->
-				</ul><ul class="nav navbar-nav visible-xs-block">
-					<li><a href="#Componenten">Componenten</a></li>
-					<li><a href="#Randapparatuur">Randapparatuur</a></li>
-					<li><a href="#Contact">Contact</a></li>
-					<li class="dropdown">
-						<?php include 'templates/login-form.php'; ?>
-					</li>
-					<li class="hidden-xs"><a href="#winkelwagen" data-toggle="modal"><img class="cart" src="img/winkelwagen.png" alt="Winkelwagen" width="20" height="20"><span class="badge" id="comparison-count"><?php print_r(count($_SESSION['cart_items'])); ?></span></a></li> <!-- Dit zal laten zien wat je allemaal gaat bestellen, momenteel is alleen een winkelwagen tekentje nodig -->
-				</ul>
-			</div>
-		</div>
-	</nav>
-<!-- Header -->
-	<section id="header">
-		<header>
-			<div class="container">
-				<img src="img/winkel.jpg">
-			</div>
-		</header>
-	</section>
+		<?php error_reporting(0); ?>
+		<!-- Header -->
+		<section id="header">
+			<header>
+				<div class="header">
+					<!-- Navigation Bar -->
+					<nav class="navbar navbar-default navbar-fixed-top topnav">
+						<div class="container">
+							<div class="navbar-header">
+								<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+								<a class="navbar-brand" href="#page-top" data-id="page-top"><div class="hidden-xs"></div><div class="visible-xs-block"><img src="img/Logo.png" height="30px"></div></a>
+								<ul class="visible-xs-block xs-basket nav navbar-nav pull-right">
+									<li><a href="#winkelwagen" data-toggle="modal"><img class="cart" src="img/winkelwagen.png" alt="Winkelwagen" width="20" height="20"><span class="badge" id="comparison-count"><?php print_r(count($_SESSION['cart_items'])); ?></span></a></li>
+								</ul>
+							</div>
+							<!-- Alles dat geactiveerd wordt wanneer je op de button klikt hier: -->
+							<div id="navbarCollapse" class="collapse navbar-collapse">
+								<ul class="nav navbar-nav navbar-center hidden-xs">
+									<li><a href="#Componenten">Componenten</a></li>
+									<li><a href="#Randapparatuur">Randapparatuur</a></li>
+									<li><a href="#Contact">Contact</a></li>
+									<li class="dropdown">
+										<?php include 'templates/login-form.php'; ?>
+									</li>
+									<li class="hidden-xs"><a href="#winkelwagen" data-toggle="modal"><img class="cart" src="img/winkelwagen.png" alt="Winkelwagen" width="20" height="20"><span class="badge" id="comparison-count"><?php print_r(count($_SESSION['cart_items'])); ?></span></a></li> <!-- Dit zal laten zien wat je allemaal gaat bestellen, momenteel is alleen een winkelwagen tekentje nodig -->
+								</ul><ul class="nav navbar-nav navbar-left visible-xs-block">
+									<li><a href="#Componenten">Componenten</a></li>
+									<li><a href="#Randapparatuur">Randapparatuur</a></li>
+									<li><a href="#Contact">Contact</a></li>
+									<li class="dropdown">
+										<?php include 'templates/login-form.php'; ?>
+									</li>
+									<li class="hidden-xs"><a href="#winkelwagen" data-toggle="modal"><img class="cart" src="img/winkelwagen.png" alt="Winkelwagen" width="20" height="20"><span class="badge" id="comparison-count"><?php print_r(count($_SESSION['cart_items'])); ?></span></a></li> <!-- Dit zal laten zien wat je allemaal gaat bestellen, momenteel is alleen een winkelwagen tekentje nodig -->
+								</ul>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</header>
+		</section>
 		
 <!-- JavaScript (& jQuery) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>

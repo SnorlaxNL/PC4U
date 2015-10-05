@@ -1,30 +1,47 @@
-.navbar-center {
-    position: absolute;
-	float: none;
-    width: 100%;
-    left: 35%;
-    top: 0;
-    text-align: center;
-    margin: auto;
-	height: 100%;
-}
-
 html,body {
-	width: 100%;
-	height: 100%;
-	margin: 0px;
-	padding: 0px;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
 }
 
 section {
-	padding-top: 50px;
-	margin-bottom: -50px;
+  padding-top: 50px;
+  margin-bottom: -50px;
 }
-header {
-    padding-top: 50px;
-	padding-bottom: 0px;
-    text-align: center;
-    color: #f8f8f8;
-    background: url(../img/header-original.jpg) no-repeat center center;
-    background-size: cover;
+
+#header {
+  padding-top: 130%;
+  padding-bottom: 0px;
+  text-align: center;
+  color: #424242;
+  background: url(../img/winkel.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.navbar, .navbar-inverse, .navbar-fixed-top, .topnav {
+  top: 60px;
+}
+@media (max-width: 767px) {
+  .navbar, .navbar-inverse, .navbar-fixed-top, .topnav {
+    top: 0px;
+  }
+}
+
+.navbar-center {
+  position: absolute;
+  float: none;
+  width: 100%;
+  left: 35%;
+  text-align: center;
+  margin: auto;
+  height: 100%;
+}
+
+.navbar-left {
+  text-align: left;
+}
+
+.login-menu {
+  padding: 10px;
 }
